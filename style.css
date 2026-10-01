@@ -1,222 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid black
 }
 
 :root {
-    --primary-background: #446FD1;
-    --secondary-background: #88ACFF;
-    --primary-text: #FFFFFF;
-    --secondary-text: #263238;
-    --additional-text: #3A454A;
-    --nav-font-size: 1.3rem;
+    /* Colors */
+    --primary-color: #3362CC;
+    --secondary-color: #B0C7FC;
+    --def-background-color: #D4D9E5;
+    --text-color: #1E282D;
+    /* for desktop  */
+    --text-size-desktop: 1rem;
+    --head-size-desktop: 1rem;
+    --subhead-size-desktop: 1rem;
+    
+    /* for tablet  */
+    --text-size-tab: 1rem;
+    --head-size-tab: 1rem;
+    --subhead-size-tab: 1rem;
+    
+    /* for mobile */
+    --text-size-mob: 1rem;
+    --head-size-mob: 1rem;
+    --subhead-size-mob: 1rem;
+
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-
-/* for header  */
+/* Header, NavBar */
 
 header {
-    padding: 1rem 0;
-    border: 5px solid var(--primary-text);
     border-radius: 15px;
-    background-color: var(--secondary-background);
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* z-index: 1000; */
+    margin: 1vh auto ;
+    width: 98vw;
+    height: 10vh;
+    background-color: var(--primary-color);
 }
-
-.container {
-    max-width: 95%;
-    margin: 0 1rem;
-    padding: 0 20px;
-}
-
-/* for navigation menu  */
 
 .navbar {
+    width: 98%;
+    height: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15rem;
 }
 
 .logo {
-    color: var(--primary-text);
+    margin: 5px;
+    width: 30vw;
+    height: 8vh;
     display: grid;
-    grid-template-columns: 90px 250px;
-    grid-template-rows: 40px 10px;
-    column-gap: 10px;
-    row-gap: 5px;
+    grid-template-columns: 60px 80px;
 }
 
-.logo img {
-    width: 80px;
-    height: 80px;
-    grid-row: 1 / span 3;
+.image-container {
+    width: 60px;
+    height: auto;
 }
 
-.logo h4 {
-    font-size: 1.1rem;
-    align-self: baseline;
-    justify-content: center;
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    grid-row: 1 / 3;
-    grid-column: 2 / 3;
+.image-container img {
+    width: inherit;
+    height: inherit;
 }
 
-.logo span {
-    font-size: 0.8rem;
-    font-family: monospace;
-    align-self: center;
-    grid-column: -1 / -2;
-    grid-row: 2 / span 3;
-}
-
-/* for navigation menu buttons */
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.navbar>ul a {
-    font-size: var(--nav-font-size);
-    text-decoration: none;
-    color: var(--primary-text);
-    font-weight: bolder;
-    padding: 0.5rem 1rem;
-}
-
-.navbar>ul a:hover {
-    border-radius: 15px;
-    background-color: var(--primary-background);
-}
-
-.active-li {
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: var(--primary-background);
-}
-
-/* for the username button at the extreme right  */
-
-.username-btn {
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--primary-background);
-    border: 2px solid var(--primary-text);
-    border-radius: 15px;
-}
-
-.username-btn img {
-    width: var(--nav-font-size);
-    height: var(--nav-font-size);
-}
-
-.username-btn a {
-    font-size: var(--nav-font-size);
-    text-decoration: none;
-    color: var(--primary-text);
-    font-weight: bold;
-}
-
-/* Hero section */
-
-.hero {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* left side of the hero section  */
-
-.left {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: baseline;
-    width: 500px;
-    gap: 8px;
-    height: 500px;
-}
-
-.headings {
-    display: flex;
-    flex-direction: column;
-}
-
-.headings h1 {
-    font-family: "Monoton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 60px;
-    color: var(--primary-background);
-}
-
-.headings h2 {
-    margin-left: 35px;
-    font-family: "Cantarell", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 40px;
-    color: var(--secondary-background);
-}
-
-.left h3 {
-    font-size: 50px;
-    font-family: "Cantarell", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: var(--additional-text);
-}
-
-.left p {
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 20px;
-    color: var(--secondary-text);
-}
-
-.left a {
-    text-align: center;
-    font-size: var(--nav-font-size);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-background);
-    text-decoration: none;
-    color: var(--primary-text);
-}
-
-
-/* right side of the hero section  */
-
-.right {
-    width: 800px;
-    height: 800px;
-}
-
-.right img {
-    width: 800px;
-    height: 800px;
-}
